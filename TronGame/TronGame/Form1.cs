@@ -16,5 +16,17 @@ namespace TronGame
         {
             InitializeComponent();
         }
+
+        private void buttonTwoPlayer_Click(object sender, EventArgs e)
+        {
+            Application.Run(new GameWindow());
+        }
+
+        /*
+        private void buttonMultiplayer_Click(object sender, EventArgs e)
+        {
+            Application.Run(new GameWindow());
+        }
+        */
     }
 }

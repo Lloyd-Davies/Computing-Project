@@ -28,32 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonTwoPlayer = new System.Windows.Forms.Button();
+            this.buttonMultiplayer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonTwoPlayer
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(66, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Play Two Player";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonTwoPlayer.BackColor = System.Drawing.Color.White;
+            this.buttonTwoPlayer.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonTwoPlayer.Location = new System.Drawing.Point(66, 91);
+            this.buttonTwoPlayer.Name = "buttonTwoPlayer";
+            this.buttonTwoPlayer.Size = new System.Drawing.Size(154, 34);
+            this.buttonTwoPlayer.TabIndex = 0;
+            this.buttonTwoPlayer.Text = "Play Two Player";
+            this.buttonTwoPlayer.UseVisualStyleBackColor = false;
+            this.buttonTwoPlayer.Click += new System.EventHandler(this.buttonTwoPlayer_Click);
             // 
-            // button2
+            // buttonMultiplayer
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(66, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Play Multiplayer (LAN)";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonMultiplayer.BackColor = System.Drawing.Color.White;
+            this.buttonMultiplayer.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonMultiplayer.Location = new System.Drawing.Point(66, 144);
+            this.buttonMultiplayer.Name = "buttonMultiplayer";
+            this.buttonMultiplayer.Size = new System.Drawing.Size(154, 34);
+            this.buttonMultiplayer.TabIndex = 1;
+            this.buttonMultiplayer.Text = "Play Multiplayer (LAN)";
+            this.buttonMultiplayer.UseVisualStyleBackColor = false;
+            this.buttonMultiplayer.Click += new System.EventHandler(this.buttonMultiplayer_Click);
             // 
             // label1
             // 
@@ -72,10 +74,13 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonMultiplayer);
+            this.Controls.Add(this.buttonTwoPlayer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -84,8 +89,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonTwoPlayer;
+        private System.Windows.Forms.Button buttonMultiplayer;
         private System.Windows.Forms.Label label1;
     }
 }
