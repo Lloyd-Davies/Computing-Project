@@ -55,7 +55,7 @@
             this.buttonMultiplayer.TabIndex = 1;
             this.buttonMultiplayer.Text = "Play Multiplayer (LAN)";
             this.buttonMultiplayer.UseVisualStyleBackColor = false;
-            this.buttonMultiplayer.Click += new System.EventHandler(this.buttonMultiplayer_Click);
+            
             // 
             // label1
             // 

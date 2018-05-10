@@ -61,7 +61,7 @@ namespace TronGame
                 else if (Players.KeyPressed(Keys.Down) && Settings.direction != Direction.Up)
                     Settings.direction = Direction.Down;
 
-                MovePlayer();
+                
             }
 
 
