@@ -23,9 +23,9 @@ namespace TronGame
         private void GameWindow_Load(object sender, EventArgs e)
         {
             // Create bike 1
-            myBike1 = new Player1(this);
+            //myBike1 = new Player1(this);
             // Create bike 2
-            myBike2 = new Player2(this);
+            //myBike2 = new Player2(this);
 
         }
     }

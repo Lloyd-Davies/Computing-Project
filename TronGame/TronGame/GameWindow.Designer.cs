@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.canvas = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
-            // 
-            // canvas
-            // 
-            this.canvas.AutoSize = true;
-            this.canvas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.canvas.Location = new System.Drawing.Point(0, 0);
-            this.canvas.Name = "canvas";
-            this.canvas.Size = new System.Drawing.Size(500, 500);
-            this.canvas.TabIndex = 0;
-            // 
-            // GameWindow
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(500, 500);
-            this.Controls.Add(this.canvas);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "GameWindow";
-            this.Text = "GameWindow";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.canvas = new System.Windows.Forms.Panel();
+			this.SuspendLayout();
+			// 
+			// canvas
+			// 
+			this.canvas.AutoSize = true;
+			this.canvas.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.canvas.Location = new System.Drawing.Point(0, 0);
+			this.canvas.Name = "canvas";
+			this.canvas.Size = new System.Drawing.Size(500, 500);
+			this.canvas.TabIndex = 0;
+			// 
+			// GameWindow
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.ClientSize = new System.Drawing.Size(500, 500);
+			this.Controls.Add(this.canvas);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
+			this.Name = "GameWindow";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "GameWindow";
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 

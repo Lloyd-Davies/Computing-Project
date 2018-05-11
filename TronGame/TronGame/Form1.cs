@@ -12,6 +12,9 @@ namespace TronGame
 {
     public partial class MainMenu : Form
     {
+
+		public GameWindow gameWindow;
+
         public MainMenu()
         {
             InitializeComponent();
@@ -19,7 +22,9 @@ namespace TronGame
 
         private void buttonTwoPlayer_Click(object sender, EventArgs e)
         {
-            Application.Run(new GameWindow());
+			GameWindow gameWindow = new GameWindow();
+			gameWindow.Show();
+
         }
 
         /*

@@ -25,7 +25,7 @@ namespace TronGame
             
             Speed = 5;
             GameOver = false;
-            direction = Direction.Left;
+            
         }
     }
 }
