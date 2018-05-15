@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 
 namespace TronGame
 {
@@ -18,15 +18,20 @@ namespace TronGame
         public GameWindow()
         {
             InitializeComponent();
+
         }
 
-        private void GameWindow_Load(object sender, EventArgs e)
+        public void GameWindow_Load(object sender, EventArgs e)
         {
             // Create bike 1
             //myBike1 = new Player1(this);
             // Create bike 2
             //myBike2 = new Player2(this);
 
+			PictureBox BackgroundImage = new PictureBox();
+			BackgroundImage.SizeMode = PictureBoxSizeMode.AutoSize;
+			BackgroundImage.Image = Properties.Resources.BackGrid;
+			GameArea.Controls.Add(BackgroundImage);
         }
     }
 }
