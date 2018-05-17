@@ -27,6 +27,10 @@ namespace TronGame
 			BackgroundGrid.BackColor = Color.Black;
 			GameArea.Controls.Add(BackgroundGrid);
 		}
-		
-	}
+
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }
