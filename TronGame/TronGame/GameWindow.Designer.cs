@@ -28,7 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.Options = new System.Windows.Forms.Panel();
+            this.Load += new System.EventHandler(this.GameWindow_Load);
+            this.Options = new System.Windows.Forms.Panel();
 			this.GameArea = new System.Windows.Forms.Panel();
 			this.SuspendLayout();
 			// 
