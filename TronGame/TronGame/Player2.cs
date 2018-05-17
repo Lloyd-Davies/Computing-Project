@@ -11,12 +11,12 @@ namespace TronGame
     {
         public PictureBox BikeImage2 = new PictureBox();
 
-        Form theInstance;
+        /*Form theInstance;
 
         public void Bike(Form formInstance)
         {
 
         }
-
+		*/
     }
 }
