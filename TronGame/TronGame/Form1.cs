@@ -27,11 +27,6 @@ namespace TronGame
 
         }
 
-        /*
-        private void buttonMultiplayer_Click(object sender, EventArgs e)
-        {
-            Application.Run(new GameWindow());
-        }
-        */
+        
     }
 }
