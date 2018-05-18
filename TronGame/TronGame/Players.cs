@@ -13,25 +13,13 @@ namespace TronGame
         public int maxScreenX = 500;
         public int maxScreenY = 500;
 
+		public PictureBox Bike1 = new PictureBox();
+		public PictureBox Bike2 = new PictureBox();
+       
+       
 
-        private static Hashtable keyTable = new Hashtable();
-
-        //Perform a check to see if a particular button is pressed.
-        public static bool KeyPressed(Keys key)
-        {
-            if (keyTable[key] == null)
-            {
-                return false;
-            }
-
-            return (bool)keyTable[key];
-        }
-
-        //Detect if a keyboard button is pressed
-        public static void ChangeState(Keys key, bool state)
-        {
-            keyTable[key] = state;
-        }
+        
+        
 
         private void StartGame()
         {
@@ -39,7 +27,7 @@ namespace TronGame
             new Settings();
         }
 
-        private void UpdateScreen(object sender, EventArgs e)
+       /* private void UpdateScreen(object sender, EventArgs e)
         {
             //Check for Game Over
             if (Settings.GameOver)
@@ -66,7 +54,7 @@ namespace TronGame
 
 
 
-        }
+        }*/
 
 
 
