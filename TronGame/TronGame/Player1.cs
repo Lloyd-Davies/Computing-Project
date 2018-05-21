@@ -14,26 +14,22 @@ namespace TronGame
 	
     public class Player1 : Players
     {
-		private GameWindow gameWindow;
+		
 		private int BikeX = 375;
 		private int BikeY = 250;
 
-		public void Bike(object sender, EventArgs e, Form gameWindow)
+		public void Bike()
 		{
-			//this.gameWindow = gameWindow;
-			PlayerBlue.Size = new System.Drawing.Size(5, 5);
+            PlayerBlue.Image = Properties.Resources.PlayerBlue;
+            PlayerBlue.Size = new System.Drawing.Size(5, 5);
 			PlayerBlue.Location = new System.Drawing.Point(BikeX, BikeY);
-			PlayerBlue.SizeMode = PictureBoxSizeMode.AutoSize;
-			PlayerBlue.Image = Properties.Resources.PlayerBlue;
-			
-			
-
+			PlayerBlue.SizeMode = PictureBoxSizeMode.StretchImage;
+            PlayerBlue.BringToFront();
+	
 		}
 
 		private static Hashtable keyTable = new Hashtable();
-
-		
-
+       
 		//Perform a check to see if a particular button is pressed.
 		private static bool KeyPressed(Keys key)
 		{
@@ -45,9 +41,11 @@ namespace TronGame
 			return (bool)keyTable[key];
 		}
 
-		//Detect if a keyboard button is pressed
-		public static void ChangeState(Keys key, bool state)
-		{
+        
+
+        //Detect if a keyboard button is pressed
+        public static void ChangeState(Keys key, bool state)
+        { 
 			keyTable[key] = state;
 		}
 

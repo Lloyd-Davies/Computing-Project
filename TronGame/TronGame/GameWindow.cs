@@ -12,31 +12,34 @@ namespace TronGame
 {
 	public partial class GameWindow : Form
 	{
-		public Player1 Bike;
-		public Player2 BikeRed;
+		public Player1 p1;
+		public Player2 p2;
 
 		public GameWindow()
 		{
 			InitializeComponent();
-		}
+            
+        }
 
 		private void GameWindow_Load(object sender, EventArgs e)
 		{
+            // Add the background grid
 			PictureBox BackgroundGrid = new PictureBox();
 			BackgroundGrid.Image = Properties.Resources.BackGrid;
 			BackgroundGrid.Size = new System.Drawing.Size(500, 500);
 			BackgroundGrid.Name = "BackgtroundGrid";
 			BackgroundGrid.SizeMode =  PictureBoxSizeMode.StretchImage;
 			BackgroundGrid.BackColor = Color.Black;
+            
 			GameArea.Controls.Add(BackgroundGrid);
+            BackgroundGrid.SendToBack();
 
-			Bike = new Player1(this);
+            Player1 p1 = new Player1();
+            p1.Bike();
+            GameArea.Controls.Add(p1.PlayerBlue);
+			
 
-
-			GameArea.Controls.Add(Bike.PlayerBlue);
-			//p1.PlayerBlue.BringToFront();
-
-			//p1.Bike();
+			
 
 
 		}
