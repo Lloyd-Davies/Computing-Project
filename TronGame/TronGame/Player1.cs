@@ -21,7 +21,7 @@ namespace TronGame
 		public void Bike()
 		{
             PlayerBlue.Image = Properties.Resources.PlayerBlue;
-            PlayerBlue.Size = new System.Drawing.Size(5, 5);
+            PlayerBlue.Size = new System.Drawing.Size(10, 10);
 			PlayerBlue.Location = new System.Drawing.Point(BikeX, BikeY);
 			PlayerBlue.SizeMode = PictureBoxSizeMode.StretchImage;
             PlayerBlue.BringToFront();

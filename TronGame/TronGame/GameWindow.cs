@@ -27,7 +27,7 @@ namespace TronGame
 			PictureBox BackgroundGrid = new PictureBox();
 			BackgroundGrid.Image = Properties.Resources.BackGrid;
 			BackgroundGrid.Size = new System.Drawing.Size(500, 500);
-			BackgroundGrid.Name = "BackgtroundGrid";
+			BackgroundGrid.Name = "BackgroundGrid";
 			BackgroundGrid.SizeMode =  PictureBoxSizeMode.StretchImage;
 			BackgroundGrid.BackColor = Color.Black;
             
@@ -37,12 +37,15 @@ namespace TronGame
             Player1 p1 = new Player1();
             p1.Bike();
             GameArea.Controls.Add(p1.PlayerBlue);
-			
-
-			
+            p1.PlayerBlue.BringToFront();
 
 
-		}
+
+
+            
+
+
+    }
 
         private void QuitButton_Click(object sender, EventArgs e)
         {
