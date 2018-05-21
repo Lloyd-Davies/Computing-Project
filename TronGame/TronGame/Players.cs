@@ -13,8 +13,8 @@ namespace TronGame
         public int maxScreenX = 500;
         public int maxScreenY = 500;
 
-		public PictureBox Bike1 = new PictureBox();
-		public PictureBox Bike2 = new PictureBox();
+		public PictureBox PlayerBlue = new PictureBox();
+		public PictureBox PlayerRed = new PictureBox();
        
        
 

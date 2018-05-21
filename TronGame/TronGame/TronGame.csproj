@@ -124,7 +124,10 @@
     <None Include="Resources\BackGrid.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Bike1.jpg" />
+    <None Include="Resources\PlayerBlue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerRed.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

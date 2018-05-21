@@ -73,9 +73,19 @@ namespace TronGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bike1 {
+        internal static System.Drawing.Bitmap PlayerBlue {
             get {
-                object obj = ResourceManager.GetObject("Bike1", resourceCulture);
+                object obj = ResourceManager.GetObject("PlayerBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlayerRed {
+            get {
+                object obj = ResourceManager.GetObject("PlayerRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
