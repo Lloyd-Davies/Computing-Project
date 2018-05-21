@@ -84,7 +84,7 @@
 		#endregion
 
 		private System.Windows.Forms.Panel Options;
-		private System.Windows.Forms.Panel GameArea;
+		public System.Windows.Forms.Panel GameArea;
         private System.Windows.Forms.Button QuitButton;
     }
 }

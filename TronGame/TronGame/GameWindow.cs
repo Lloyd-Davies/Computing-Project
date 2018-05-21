@@ -12,6 +12,9 @@ namespace TronGame
 {
 	public partial class GameWindow : Form
 	{
+		public Player1 Bike;
+		public Player2 BikeRed;
+
 		public GameWindow()
 		{
 			InitializeComponent();
@@ -26,6 +29,16 @@ namespace TronGame
 			BackgroundGrid.SizeMode =  PictureBoxSizeMode.StretchImage;
 			BackgroundGrid.BackColor = Color.Black;
 			GameArea.Controls.Add(BackgroundGrid);
+
+			Bike = new Player1(this);
+
+
+			GameArea.Controls.Add(Bike.PlayerBlue);
+			//p1.PlayerBlue.BringToFront();
+
+			//p1.Bike();
+
+
 		}
 
         private void QuitButton_Click(object sender, EventArgs e)
