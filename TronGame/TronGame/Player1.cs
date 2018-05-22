@@ -15,17 +15,19 @@ namespace TronGame
     public class Player1 : Players
     {
 		
-		private int BikeX = 375;
-		private int BikeY = 250;
+		public int BikeX = 375;
+		public int BikeY = 250;
 
 		public void Bike()
 		{
             PlayerBlue.Image = Properties.Resources.PlayerBlue;
-            PlayerBlue.Size = new System.Drawing.Size(10, 10);
+            PlayerBlue.Size = new System.Drawing.Size(15, 15);
 			PlayerBlue.Location = new System.Drawing.Point(BikeX, BikeY);
 			PlayerBlue.SizeMode = PictureBoxSizeMode.StretchImage;
-            PlayerBlue.BringToFront();
-	
+            PlayerBlue.BackColor = Color.Transparent;
+            
+            
+
 		}
 
 		private static Hashtable keyTable = new Hashtable();
@@ -40,8 +42,6 @@ namespace TronGame
 
 			return (bool)keyTable[key];
 		}
-
-        
 
         //Detect if a keyboard button is pressed
         public static void ChangeState(Keys key, bool state)
@@ -79,17 +79,7 @@ namespace TronGame
 			{
 				Settings.direction = Direction.Down;
 				BikeY = BikeY - 5;
-			}
-				
-
-
-			
-
-
-
+			}		
 		}
 	}
-
-	
-    
 }

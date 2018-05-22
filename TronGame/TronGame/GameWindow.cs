@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace TronGame
 {
@@ -17,8 +18,9 @@ namespace TronGame
 
 		public GameWindow()
 		{
-			InitializeComponent();
+            InitializeComponent();
             
+
         }
 
 		private void GameWindow_Load(object sender, EventArgs e)
@@ -39,13 +41,16 @@ namespace TronGame
             GameArea.Controls.Add(p1.PlayerBlue);
             p1.PlayerBlue.BringToFront();
 
+            Player2 p2 = new Player2();
+            p2.Bike();
+            GameArea.Controls.Add(p2.PlayerRed);
+            p2.PlayerRed.BringToFront();
 
 
 
-            
 
-
-    }
+        }
+      
 
         private void QuitButton_Click(object sender, EventArgs e)
         {
