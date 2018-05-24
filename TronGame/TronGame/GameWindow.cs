@@ -13,8 +13,10 @@ namespace TronGame
 {
 	public partial class GameWindow : Form
 	{
+        public Players p;
 		public Player1 p1;
 		public Player2 p2;
+
 
 		public GameWindow()
 		{
@@ -46,25 +48,29 @@ namespace TronGame
             GameArea.Controls.Add(p2.PlayerRed);
             p2.PlayerRed.BringToFront();
 
-			
+            Players p = new TronGame.Players();
+            GameStart();
 
 
 		}
 
-		private void GameStart(object sender, EventArgs e)
+		private void GameStart()
 		{
-			/*bool SpacePressed = false;
-			Label SpaceToStart = new Label();
-			SpaceToStart.Text = "Press Space to start the game!";
-			SpaceToStart.Location = new System.Drawing.Point(200, 400);
-			SpaceToStart.BringToFront();
-			GameArea.Controls.Add(SpaceToStart);
+            StartPrompt = new System.Windows.Forms.Label();
 
-			if (SpacePressed == true)
-			{
+            StartPrompt.AutoSize = true;
+            StartPrompt.BackColor = System.Drawing.Color.Transparent;
+            StartPrompt.Cursor = System.Windows.Forms.Cursors.Default;
+            StartPrompt.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            StartPrompt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            StartPrompt.Location = new System.Drawing.Point(77, 404);
+            StartPrompt.Name = "StartPrompt";
+            StartPrompt.Size = new System.Drawing.Size(352, 31);
+            StartPrompt.TabIndex = 0;
+            StartPrompt.Text = "Press Space to start the game!";
 
-			}*/
-		}
+            GameArea.Controls.Add(StartPrompt);
+        }
 
         private void QuitButton_Click(object sender, EventArgs e)
         {

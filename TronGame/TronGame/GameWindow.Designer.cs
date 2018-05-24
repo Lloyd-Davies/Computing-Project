@@ -29,9 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.Options = new System.Windows.Forms.Panel();
-			this.QuitButton = new System.Windows.Forms.Button();
+			this.QuitButton = new NonFocusButton();
 			this.GameArea = new System.Windows.Forms.Panel();
-			this.StartPrompt = new System.Windows.Forms.Label();
 			this.Options.SuspendLayout();
 			this.GameArea.SuspendLayout();
 			this.SuspendLayout();
@@ -68,19 +67,6 @@
 			this.GameArea.Name = "GameArea";
 			this.GameArea.Size = new System.Drawing.Size(500, 500);
 			this.GameArea.TabIndex = 1;
-			// 
-			// StartPrompt
-			// 
-			this.StartPrompt.AutoSize = true;
-			this.StartPrompt.BackColor = System.Drawing.Color.Transparent;
-			this.StartPrompt.Cursor = System.Windows.Forms.Cursors.Default;
-			this.StartPrompt.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.StartPrompt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.StartPrompt.Location = new System.Drawing.Point(77, 404);
-			this.StartPrompt.Name = "StartPrompt";
-			this.StartPrompt.Size = new System.Drawing.Size(352, 31);
-			this.StartPrompt.TabIndex = 0;
-			this.StartPrompt.Text = "Press Space to start the game!";
 			// 
 			// GameWindow
 			// 
