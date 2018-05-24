@@ -31,7 +31,9 @@
 			this.Options = new System.Windows.Forms.Panel();
 			this.QuitButton = new System.Windows.Forms.Button();
 			this.GameArea = new System.Windows.Forms.Panel();
+			this.StartPrompt = new System.Windows.Forms.Label();
 			this.Options.SuspendLayout();
+			this.GameArea.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Options
@@ -46,6 +48,7 @@
 			// QuitButton
 			// 
 			this.QuitButton.BackColor = System.Drawing.Color.Red;
+			this.QuitButton.CausesValidation = false;
 			this.QuitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.QuitButton.Location = new System.Drawing.Point(417, 3);
 			this.QuitButton.Name = "QuitButton";
@@ -57,11 +60,27 @@
 			// 
 			// GameArea
 			// 
+			this.GameArea.BackColor = System.Drawing.Color.Transparent;
+			this.GameArea.BackgroundImage = global::TronGame.Properties.Resources.BackGrid;
+			this.GameArea.Controls.Add(this.StartPrompt);
 			this.GameArea.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.GameArea.Location = new System.Drawing.Point(0, 30);
 			this.GameArea.Name = "GameArea";
 			this.GameArea.Size = new System.Drawing.Size(500, 500);
 			this.GameArea.TabIndex = 1;
+			// 
+			// StartPrompt
+			// 
+			this.StartPrompt.AutoSize = true;
+			this.StartPrompt.BackColor = System.Drawing.Color.Transparent;
+			this.StartPrompt.Cursor = System.Windows.Forms.Cursors.Default;
+			this.StartPrompt.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.StartPrompt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.StartPrompt.Location = new System.Drawing.Point(77, 404);
+			this.StartPrompt.Name = "StartPrompt";
+			this.StartPrompt.Size = new System.Drawing.Size(352, 31);
+			this.StartPrompt.TabIndex = 0;
+			this.StartPrompt.Text = "Press Space to start the game!";
 			// 
 			// GameWindow
 			// 
@@ -77,6 +96,8 @@
 			this.Text = "GameWindow";
 			this.Load += new System.EventHandler(this.GameWindow_Load);
 			this.Options.ResumeLayout(false);
+			this.GameArea.ResumeLayout(false);
+			this.GameArea.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -86,5 +107,6 @@
 		private System.Windows.Forms.Panel Options;
 		public System.Windows.Forms.Panel GameArea;
         private System.Windows.Forms.Button QuitButton;
-    }
+		private System.Windows.Forms.Label StartPrompt;
+	}
 }

@@ -25,7 +25,7 @@ namespace TronGame
 
 		private void GameWindow_Load(object sender, EventArgs e)
 		{
-            // Add the background grid
+            /* Add the background grid
 			PictureBox BackgroundGrid = new PictureBox();
 			BackgroundGrid.Image = Properties.Resources.BackGrid;
 			BackgroundGrid.Size = new System.Drawing.Size(500, 500);
@@ -34,7 +34,7 @@ namespace TronGame
 			BackgroundGrid.BackColor = Color.Black;
             
 			GameArea.Controls.Add(BackgroundGrid);
-            BackgroundGrid.SendToBack();
+            BackgroundGrid.SendToBack();*/
 
             Player1 p1 = new Player1();
             p1.Bike();
@@ -46,15 +46,32 @@ namespace TronGame
             GameArea.Controls.Add(p2.PlayerRed);
             p2.PlayerRed.BringToFront();
 
+			
 
 
+		}
 
-        }
-      
+		private void GameStart(object sender, EventArgs e)
+		{
+			/*bool SpacePressed = false;
+			Label SpaceToStart = new Label();
+			SpaceToStart.Text = "Press Space to start the game!";
+			SpaceToStart.Location = new System.Drawing.Point(200, 400);
+			SpaceToStart.BringToFront();
+			GameArea.Controls.Add(SpaceToStart);
+
+			if (SpacePressed == true)
+			{
+
+			}*/
+		}
 
         private void QuitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+			//Application.Exit();
         }
-    }
+
+	
+	}
 }
