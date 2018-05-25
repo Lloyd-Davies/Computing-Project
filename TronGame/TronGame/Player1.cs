@@ -33,27 +33,11 @@ namespace TronGame
 		private static Hashtable keyTable = new Hashtable();
        
 		//Perform a check to see if a particular button is pressed.
-		private static bool KeyPressed(Keys key)
-		{
-			if (keyTable[key] == null)
-			{
-				return false;
-			}
-
-			return (bool)keyTable[key];
-		}
+		
 
         //Detect if a keyboard button is pressed
-        public static void ChangeState(Keys key, bool state)
-        { 
-			keyTable[key] = state;
-		}
-
-		private void StartGame()
-		{
-			//Set settings to default
-			new Settings();
-		}
+      
+		
 
 		private void UpdateScreen(object sender, EventArgs e)
 		{

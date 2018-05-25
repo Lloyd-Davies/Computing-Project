@@ -49,12 +49,16 @@ namespace TronGame
             p2.PlayerRed.BringToFront();
 
             Players p = new TronGame.Players();
-            GameStart();
+
+			GameStart();
+			
 
 
 		}
 
-		private void GameStart()
+		private static Hashtable keyTable = new Hashtable();
+
+		private void GameStart(System.Windows.Forms.KeyEventArgs e)
 		{
             StartPrompt = new System.Windows.Forms.Label();
 
@@ -70,7 +74,20 @@ namespace TronGame
             StartPrompt.Text = "Press Space to start the game!";
 
             GameArea.Controls.Add(StartPrompt);
-        }
+
+			if (( Keys.Space == e.KeyCode))
+			{
+				
+			
+				GameArea.Controls.Remove(StartPrompt);
+				p.StartGame();
+
+			}
+
+
+		}
+
+
 
         private void QuitButton_Click(object sender, EventArgs e)
         {
