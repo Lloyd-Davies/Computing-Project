@@ -25,18 +25,22 @@ namespace TronGame
 
         }
 
-		private void GameWindow_Load(object sender, EventArgs e)
+		private void GameWindow_Load(object sender, KeyEventArgs e)
 		{
-            /* Add the background grid
-			PictureBox BackgroundGrid = new PictureBox();
-			BackgroundGrid.Image = Properties.Resources.BackGrid;
-			BackgroundGrid.Size = new System.Drawing.Size(500, 500);
-			BackgroundGrid.Name = "BackgroundGrid";
-			BackgroundGrid.SizeMode =  PictureBoxSizeMode.StretchImage;
-			BackgroundGrid.BackColor = Color.Black;
-            
-			GameArea.Controls.Add(BackgroundGrid);
-            BackgroundGrid.SendToBack();*/
+            StartPrompt = new Label();
+
+            StartPrompt.AutoSize = true;
+            StartPrompt.BackColor = Color.Transparent;
+            StartPrompt.Cursor = Cursors.Default;
+            StartPrompt.Font = new Font("Comic Sans MS", 16F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            StartPrompt.ForeColor = SystemColors.ButtonHighlight;
+            StartPrompt.Location = new Point(77, 404);
+            StartPrompt.Name = "StartPrompt";
+            StartPrompt.Size = new Size(352, 31);
+            StartPrompt.TabIndex = 0;
+            StartPrompt.Text = "Press Space to start the game!";
+
+            GameArea.Controls.Add(StartPrompt);
 
             Player1 p1 = new Player1();
             p1.Bike();
@@ -50,30 +54,16 @@ namespace TronGame
 
             Players p = new TronGame.Players();
 
-			GameStart();
-			
+            GameStart(e); 
 
 
 		}
 
 		private static Hashtable keyTable = new Hashtable();
 
-		private void GameStart(System.Windows.Forms.KeyEventArgs e)
+		private void GameStart(KeyEventArgs e)
 		{
-            StartPrompt = new System.Windows.Forms.Label();
-
-            StartPrompt.AutoSize = true;
-            StartPrompt.BackColor = System.Drawing.Color.Transparent;
-            StartPrompt.Cursor = System.Windows.Forms.Cursors.Default;
-            StartPrompt.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            StartPrompt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            StartPrompt.Location = new System.Drawing.Point(77, 404);
-            StartPrompt.Name = "StartPrompt";
-            StartPrompt.Size = new System.Drawing.Size(352, 31);
-            StartPrompt.TabIndex = 0;
-            StartPrompt.Text = "Press Space to start the game!";
-
-            GameArea.Controls.Add(StartPrompt);
+            
 
 			if (( Keys.Space == e.KeyCode))
 			{

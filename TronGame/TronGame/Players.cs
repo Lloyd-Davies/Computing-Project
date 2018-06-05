@@ -25,6 +25,10 @@ namespace TronGame
         {
             //Set settings to default
             new Settings();
+            Player1 p1 = new Player1();
+            Player2 p2 = new Player2();
+            
+
         }
 		private static Hashtable keyTable = new Hashtable();
 
@@ -44,7 +48,7 @@ namespace TronGame
 		}
 
 
-
+        /*
 		static void MovePlayers()
 		{ 
 			 if (firstPlayerDirection == right) 
@@ -122,7 +126,7 @@ namespace TronGame
 		}
 
 
-
+    */
 
 
 

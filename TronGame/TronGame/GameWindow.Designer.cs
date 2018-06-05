@@ -60,8 +60,7 @@
 			// GameArea
 			// 
 			this.GameArea.BackColor = System.Drawing.Color.Transparent;
-			this.GameArea.BackgroundImage = global::TronGame.Properties.Resources.BackGrid;
-			this.GameArea.Controls.Add(this.StartPrompt);
+			this.GameArea.BackgroundImage = global::TronGame.Properties.Resources.BackGrid;			
 			this.GameArea.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.GameArea.Location = new System.Drawing.Point(0, 30);
 			this.GameArea.Name = "GameArea";
