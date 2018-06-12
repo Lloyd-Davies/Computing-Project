@@ -25,9 +25,10 @@ namespace TronGame
 
         }
 
-		private void GameWindow_Load(object sender, KeyEventArgs e)
+		private void GameWindow_Load(object sender, EventArgs e)
 		{
-            StartPrompt = new Label();
+			this.KeyDown += new KeyEventHandler(GameStart);
+			StartPrompt = new Label();
 
             StartPrompt.AutoSize = true;
             StartPrompt.BackColor = Color.Transparent;
@@ -54,14 +55,15 @@ namespace TronGame
 
             Players p = new TronGame.Players();
 
-            GameStart(e); 
+            //GameStart(e); 
 
 
 		}
 
 		private static Hashtable keyTable = new Hashtable();
+		
 
-		private void GameStart(KeyEventArgs e)
+		private void GameStart(object sender, KeyEventArgs e)
 		{
             
 

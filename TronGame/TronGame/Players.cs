@@ -15,21 +15,22 @@ namespace TronGame
 
 		public PictureBox PlayerBlue = new PictureBox();
 		public PictureBox PlayerRed = new PictureBox();
-       
-       
 
-        
-        
+		
 
-        public void StartGame()
+
+
+
+		public void StartGame()
         {
             //Set settings to default
             new Settings();
-            Player1 p1 = new Player1();
-            Player2 p2 = new Player2();
-            
 
-        }
+			Player1 p1 = new Player1();
+			Player2 p2 = new Player2();
+
+
+		}
 		private static Hashtable keyTable = new Hashtable();
 
 		public static bool KeyPressed(Keys key)
