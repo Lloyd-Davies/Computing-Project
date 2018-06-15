@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace TronGame
 {
+
     public class Players
     {
         public int maxScreenX = 500;
@@ -23,14 +24,15 @@ namespace TronGame
 
 		public void StartGame()
         {
-            //Set settings to default
-            new Settings();
-
+			//Set settings to default
+			new Settings();
+			
 			Player1 p1 = new Player1();
 			Player2 p2 = new Player2();
 
-
+			
 		}
+
 		private static Hashtable keyTable = new Hashtable();
 
 		public static bool KeyPressed(Keys key)

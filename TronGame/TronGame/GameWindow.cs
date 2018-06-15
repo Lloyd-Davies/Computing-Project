@@ -16,7 +16,7 @@ namespace TronGame
         public Players p;
 		public Player1 p1;
 		public Player2 p2;
-
+		public bool Started = false;
 
 		public GameWindow()
 		{
@@ -65,18 +65,17 @@ namespace TronGame
 
 		private void GameStart(object sender, KeyEventArgs e)
 		{
-            
 
-			if (( Keys.Space == e.KeyCode))
+
+			if ((Keys.Space == e.KeyCode))
 			{
-				
-			
+
+				Started = true;
 				GameArea.Controls.Remove(StartPrompt);
 				p.StartGame();
 
 			}
-
-
+			
 		}
 
 
